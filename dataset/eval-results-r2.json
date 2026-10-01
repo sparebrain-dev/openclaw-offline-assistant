@@ -22,10 +22,10 @@
   {
     "id": "R03",
     "category": "paraphrase",
-    "question": "卖家咋不送个key，我哪知道去哪弄",
+    "question": "发行方咋不送个key，我哪知道去哪弄",
     "answer": "去Kimi或DeepSeek官网注册，免费获取，推荐这两家。",
     "seconds": 0.14,
-    "expect": "key要用自己的，卖家不预装，Kimi或DeepSeek官网免费注册",
+    "expect": "key要用自己的，发行方不预装，Kimi或DeepSeek官网免费注册",
     "must_contain": [],
     "must_not": []
   },
@@ -264,9 +264,9 @@
     "id": "R25",
     "category": "fact",
     "question": "微信里能跟你聊不",
-    "answer": "可以，是可选进阶功能。要联系卖家远程协助装企业微信插件，扫码接入，不用服务器。",
+    "answer": "可以，是可选进阶功能。要联系发行方远程协助装企业微信插件，扫码接入，不用服务器。",
     "seconds": 0.17,
-    "expect": "联系卖家装企业微信插件，扫码接入",
+    "expect": "联系发行方装企业微信插件，扫码接入",
     "must_contain": [],
     "must_not": []
   },

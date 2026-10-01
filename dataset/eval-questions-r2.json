@@ -1,7 +1,7 @@
 [
   {"id": "R01", "category": "paraphrase", "question": "盘插上了，然后我该点什么？", "expect": "双击根目录启动OpenClaw.bat，建议USB 3.0蓝色接口", "must_not": []},
   {"id": "R02", "category": "paraphrase", "question": "第一次启动那么慢，卡住了吧", "expect": "首次1到2分钟正常，浏览器会自动打开控制台", "must_not": []},
-  {"id": "R03", "category": "paraphrase", "question": "卖家咋不送个key，我哪知道去哪弄", "expect": "key要用自己的，卖家不预装，Kimi或DeepSeek官网免费注册", "must_not": []},
+  {"id": "R03", "category": "paraphrase", "question": "发行方咋不送个key，我哪知道去哪弄", "expect": "key要用自己的，发行方不预装，Kimi或DeepSeek官网免费注册", "must_not": []},
   {"id": "R04", "category": "paraphrase", "question": "向导里那个网关安全，选哪个？", "expect": "token模式，记住令牌", "must_not": []},
   {"id": "R05", "category": "paraphrase", "question": "聊得正欢想换个模型，得退出去改吗", "expect": "不用退出，聊天框输入 /model 切换", "must_not": []},
   {"id": "R06", "category": "paraphrase", "question": "默认用哪个模型能改吗，不想每次都选", "expect": "黑色窗口输入 openclaw models set", "must_not": []},
@@ -27,7 +27,7 @@
   {"id": "R22", "category": "fact", "question": "提示18789被占了，咋整", "expect": "另一个OpenClaw在运行，关掉再启动", "must_not": []},
   {"id": "R23", "category": "fact", "question": "Gateway Token在哪能翻到", "expect": "{usb_drive}:\\data\\.openclaw\\openclaw.json 找token行", "must_contain": ["openclaw.json"], "must_not": []},
   {"id": "R24", "category": "fact", "question": "Windows Defender怎么给它放行", "expect": "排除项→添加文件夹→U盘根目录", "must_not": []},
-  {"id": "R25", "category": "fact", "question": "微信里能跟你聊不", "expect": "联系卖家装企业微信插件，扫码接入", "must_not": []},
+  {"id": "R25", "category": "fact", "question": "微信里能跟你聊不", "expect": "联系发行方装企业微信插件，扫码接入", "must_not": []},
   {"id": "R26", "category": "fact", "question": "那个联网搜索功能咋开", "expect": "tools.web.search.enabled=true", "must_not": []},
   {"id": "R27", "category": "fact", "question": "你这盘锁的哪个版本", "expect": "2026.7.35 稳定版，自动更新永久关闭", "must_contain": ["2026.7.35"], "must_not": ["编造其他版本号"]},
 
