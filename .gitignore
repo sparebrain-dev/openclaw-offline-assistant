@@ -1,0 +1,20 @@
+# dependencies (install with npm install)
+node_modules/
+
+# model weights — too large for git, download separately (see README)
+*.onnx
+*.pth
+model/
+
+# runtime state
+state.json
+*.log
+
+# python
+__pycache__/
+.venv/
+*.pyc
+
+# os
+Thumbs.db
+.DS_Store

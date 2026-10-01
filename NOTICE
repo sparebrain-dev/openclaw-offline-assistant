@@ -1,0 +1,20 @@
+OpenClaw Offline Assistant
+Copyright 2026 the OpenClaw Offline Assistant contributors
+
+This project includes code derived from MiniMind (https://github.com/jingyaogong/minimind)
+by Jingyao Gong, licensed under the Apache License, Version 2.0.
+A copy of the license is included in the LICENSE file.
+
+The fine-tuned model weights (offline_sft_v2_768.pth / offline_assistant_fp32.onnx)
+are derivative works of the MiniMind pre-trained weights
+(_ModelScope: gongjy/minimind-3-pytorch_) and are likewise
+distributed under the Apache License, Version 2.0.
+
+Changes made to MiniMind materials:
+- Supervised fine-tuning on a narrow-domain dataset (this repository, dataset/)
+- Conversion of the fine-tuned PyTorch weights to ONNX format (training/export_onnx.py)
+- No changes to the MiniMind source code itself; the upstream training scripts
+  are used unmodified (see training/TRAINING.md)
+
+This product is not affiliated with or endorsed by the OpenClaw project.
+"OpenClaw" is used only to describe compatibility.

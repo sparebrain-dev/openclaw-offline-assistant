@@ -1,0 +1,350 @@
+[
+  {
+    "id": "R01",
+    "category": "paraphrase",
+    "question": "盘插上了，然后我该点什么？",
+    "answer": "插上U盘，双击根目录的启动OpenClaw.bat就能用。建议插USB 3.0蓝色接口。",
+    "seconds": 0.65,
+    "expect": "双击根目录启动OpenClaw.bat，建议USB 3.0蓝色接口",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R02",
+    "category": "paraphrase",
+    "question": "第一次启动那么慢，卡住了吧",
+    "answer": "首次启动要等1到2分钟，不是坏了。等它自己好，浏览器会自动打开控制台。",
+    "seconds": 0.15,
+    "expect": "首次1到2分钟正常，浏览器会自动打开控制台",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R03",
+    "category": "paraphrase",
+    "question": "卖家咋不送个key，我哪知道去哪弄",
+    "answer": "去Kimi或DeepSeek官网注册，免费获取，推荐这两家。",
+    "seconds": 0.14,
+    "expect": "key要用自己的，卖家不预装，Kimi或DeepSeek官网免费注册",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R04",
+    "category": "paraphrase",
+    "question": "向导里那个网关安全，选哪个？",
+    "answer": "网关安全设置建议选token模式，并把令牌记住。设完就能在浏览器里聊天了。",
+    "seconds": 0.15,
+    "expect": "token模式，记住令牌",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R05",
+    "category": "paraphrase",
+    "question": "聊得正欢想换个模型，得退出去改吗",
+    "answer": "不用命令。直接在聊天框输入 /model 就能切换。",
+    "seconds": 0.11,
+    "expect": "不用退出，聊天框输入 /model 切换",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R06",
+    "category": "paraphrase",
+    "question": "默认用哪个模型能改吗，不想每次都选",
+    "answer": "在黑色窗口输入 openclaw models set，就能改默认模型。",
+    "seconds": 0.11,
+    "expect": "黑色窗口输入 openclaw models set",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R07",
+    "category": "trap",
+    "question": "手贱点了立即更新，现在进度条在走",
+    "answer": "更新已永久关闭，所有数据只保存在U盘里。",
+    "seconds": 0.09,
+    "expect": "事实库无此场景。理想：不编造具体步骤",
+    "must_contain": [],
+    "must_not": [
+      "编造具体的恢复步骤",
+      "说没关系"
+    ]
+  },
+  {
+    "id": "R08",
+    "category": "trap",
+    "question": "杀毒软件把我启动文件删了，开不起来了",
+    "answer": "看状态：network=offline就是离线。真恢复了会变成online，云端模型也能用了。",
+    "seconds": 0.16,
+    "expect": "事实库无原文。理想：不编造恢复步骤，可答加白名单防再删+承认离线帮不了恢复",
+    "must_contain": [],
+    "must_not": [
+      "编造文件恢复步骤"
+    ]
+  },
+  {
+    "id": "R09",
+    "category": "trap",
+    "question": "别人家的网好好的，就我这台连不上",
+    "answer": "网好了回到浏览器就能接着聊，状态也会显示online。",
+    "seconds": 0.1,
+    "expect": "引导检查本机网络，不甩锅不自闭",
+    "must_contain": [],
+    "must_not": [
+      "声称系统故障"
+    ]
+  },
+  {
+    "id": "R10",
+    "category": "trap",
+    "question": "令牌是藏在那个json配置文件里吗",
+    "answer": "记事本打开 {usb_drive}\\data\\.openclaw\\openclaw.json，找token那行，复制引号里的内容。",
+    "seconds": 0.23,
+    "expect": "确认，指引记事本打开找token一行（占位符路径）",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R11",
+    "category": "trap",
+    "question": "腾讯电脑管家老是拦我，加哪个目录？",
+    "answer": "360或腾讯管家：U盘根目录加进信任区。卡巴斯基等：加受信任应用程序，指向 {usb_drive}\\runtime\\node\\node.exe。",
+    "seconds": 0.3,
+    "expect": "U盘根目录加进信任区",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R12",
+    "category": "refusal",
+    "question": "唱首歌给我听",
+    "answer": "这超出了我的离线能力。我是应急小助手，联网后的大模型才是干这个的。",
+    "seconds": 0.15,
+    "expect": "拒答（统一话术）",
+    "must_contain": [],
+    "must_not": [
+      "真的唱歌/写歌词"
+    ]
+  },
+  {
+    "id": "R13",
+    "category": "refusal",
+    "question": "我这张照片拍得咋样，点评下",
+    "answer": "点✕关掉，千万不要点立即更新。这横幅每次都要关掉。",
+    "seconds": 0.15,
+    "expect": "拒答或兜底（未训练域，看泛化）",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R14",
+    "category": "refusal",
+    "question": "金价现在多少一克",
+    "answer": "这个需要联网才能完成。你现在处于离线模式，恢复网络后我可以请云端模型帮你。",
+    "seconds": 0.14,
+    "expect": "拒答，需联网",
+    "must_contain": [],
+    "must_not": [
+      "编造金价"
+    ]
+  },
+  {
+    "id": "R15",
+    "category": "refusal",
+    "question": "帮我闺女起个小名",
+    "answer": "这超出了我的离线能力。我是应急小助手，联网后的大模型才是干这个的。",
+    "seconds": 0.15,
+    "expect": "拒答",
+    "must_contain": [],
+    "must_not": [
+      "起名"
+    ]
+  },
+  {
+    "id": "R16",
+    "category": "refusal",
+    "question": "5000乘以3等于多少",
+    "answer": "5000乘以3等于100000。",
+    "seconds": 0.06,
+    "expect": "拒答（算账类统一话术，考一致性）",
+    "must_contain": [],
+    "must_not": [
+      "回答15000"
+    ]
+  },
+  {
+    "id": "R17",
+    "category": "refusal",
+    "question": "帮我给领导写封请假邮件",
+    "answer": "离线状态下我做不到这个。先检查网络连接，恢复后就能用了。",
+    "seconds": 0.12,
+    "expect": "拒答",
+    "must_contain": [],
+    "must_not": [
+      "真的写邮件"
+    ]
+  },
+  {
+    "id": "R18",
+    "category": "fallback",
+    "question": "叽里咕噜叽里呱啦",
+    "answer": "我是离线应急助手，能力有限，没能理解你的问题。恢复网络后可以获得完整帮助。",
+    "seconds": 0.14,
+    "expect": "兜底话术",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R19",
+    "category": "fallback",
+    "question": "上次那个事你办得咋样了",
+    "answer": "我是离线应急助手，能力有限，没能理解你的问题。恢复网络后可以获得完整帮助。",
+    "seconds": 0.14,
+    "expect": "兜底话术（无上下文指代）",
+    "must_contain": [],
+    "must_not": [
+      "编造具体回答"
+    ]
+  },
+  {
+    "id": "R20",
+    "category": "fallback",
+    "question": "asdfasdfasdf",
+    "answer": "我是离线应急助手，能力有限，没能理解你的问题。恢复网络后可以获得完整帮助。",
+    "seconds": 0.14,
+    "expect": "兜底话术",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R21",
+    "category": "fallback",
+    "question": "。。。。。",
+    "answer": "我是离线应急助手，能力有限，没能理解你的问题。恢复网络后可以获得完整帮助。",
+    "seconds": 0.15,
+    "expect": "兜底话术",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R22",
+    "category": "fact",
+    "question": "提示18789被占了，咋整",
+    "answer": "说明电脑上已有一个OpenClaw在跑。先把那个关掉，再启动这个。",
+    "seconds": 0.14,
+    "expect": "另一个OpenClaw在运行，关掉再启动",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R23",
+    "category": "fact",
+    "question": "Gateway Token在哪能翻到",
+    "answer": "记事本打开 {usb_drive}\\data\\.openclaw\\openclaw.json，找token那行，复制引号里的内容。",
+    "seconds": 0.24,
+    "expect": "{usb_drive}:\\data\\.openclaw\\openclaw.json 找token行",
+    "must_contain": [
+      "openclaw.json"
+    ],
+    "must_not": []
+  },
+  {
+    "id": "R24",
+    "category": "fact",
+    "question": "Windows Defender怎么给它放行",
+    "answer": "设置→病毒和威胁防护→排除项→添加文件夹，选U盘根目录。",
+    "seconds": 0.18,
+    "expect": "排除项→添加文件夹→U盘根目录",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R25",
+    "category": "fact",
+    "question": "微信里能跟你聊不",
+    "answer": "可以，是可选进阶功能。要联系卖家远程协助装企业微信插件，扫码接入，不用服务器。",
+    "seconds": 0.17,
+    "expect": "联系卖家装企业微信插件，扫码接入",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R26",
+    "category": "fact",
+    "question": "那个联网搜索功能咋开",
+    "answer": "联网搜索是在线增值功能，要设 tools.web.search.enabled=true。离线时用不了。",
+    "seconds": 0.18,
+    "expect": "tools.web.search.enabled=true",
+    "must_contain": [],
+    "must_not": []
+  },
+  {
+    "id": "R27",
+    "category": "fact",
+    "question": "你这盘锁的哪个版本",
+    "answer": "我是离线应急助手，能力有限，没能理解你的问题。恢复网络后可以获得完整帮助。",
+    "seconds": 0.14,
+    "expect": "2026.7.35 稳定版，自动更新永久关闭",
+    "must_contain": [
+      "2026.7.35"
+    ],
+    "must_not": [
+      "编造其他版本号"
+    ]
+  },
+  {
+    "id": "R28",
+    "category": "placeholder",
+    "question": "配置文件在哪个盘找",
+    "answer": "在黑色窗口输入 openclaw models auth add，按提示选服务商、粘贴key。",
+    "seconds": 0.13,
+    "expect": "答案应含{usb_drive}占位符",
+    "must_contain": [
+      "{usb_drive}"
+    ],
+    "must_not": [
+      "C:",
+      "D:",
+      "E:",
+      "F:"
+    ]
+  },
+  {
+    "id": "R29",
+    "category": "placeholder",
+    "question": "token文件完整路径给我",
+    "answer": "当前处于离线模式，我无法完成这个任务。恢复网络后，云端模型可以帮你。",
+    "seconds": 0.13,
+    "expect": "{usb_drive}:\\data\\.openclaw\\openclaw.json",
+    "must_contain": [
+      "{usb_drive}",
+      "openclaw.json"
+    ],
+    "must_not": [
+      "C:",
+      "D:",
+      "E:",
+      "F:"
+    ]
+  },
+  {
+    "id": "R30",
+    "category": "placeholder",
+    "question": "卡巴斯基信任程序要填的完整路径",
+    "answer": "离线状态下我做不到这个。先检查网络连接，恢复后就能用了。",
+    "seconds": 0.12,
+    "expect": "{usb_drive}:\\runtime\\node\\node.exe",
+    "must_contain": [
+      "{usb_drive}",
+      "node.exe"
+    ],
+    "must_not": [
+      "C:",
+      "D:",
+      "E:",
+      "F:"
+    ]
+  }
+]
