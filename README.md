@@ -32,7 +32,7 @@
 ```bash
 cd server
 npm install
-# 下载权重（见 scripts/WEIGHTS.md）：offline_assistant_fp32.onnx + model/ 放到本目录
+# 下载权重（见 scripts/WEIGHTS.md，托管于 ModelScope：sparebrain/openclaw-offline-assistant）：offline_assistant_fp32.onnx + model/ 放到本目录
 node server.js
 ```
 

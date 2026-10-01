@@ -7,11 +7,20 @@
 | `offline_assistant_fp32.onnx` | 生产用推理权重（FP32 ONNX） |
 | `model/` | tokenizer 文件目录 |
 
-## ModelScope 仓库（发布时填实际地址）
+## ModelScope 仓库
 
-> TODO：权重上传后替换为实际链接
-> 建议仓库名：`openclaw-offline-assistant`
-> 需包含：offline_assistant_fp32.onnx、model/ 目录
+**https://modelscope.cn/models/sparebrain/openclaw-offline-assistant**
+
+包含：`offline_assistant_fp32.onnx`（300MB）+ `model/`（tokenizer 及 MiniMind 模型定义源码）
+
+用 Git 下载（需 [git-lfs](https://git-lfs.com/)）：
+
+```bash
+git lfs install
+git clone https://www.modelscope.cn/models/sparebrain/openclaw-offline-assistant.git
+```
+
+或到仓库页面逐个文件下载。
 
 下载后目录结构：
 
